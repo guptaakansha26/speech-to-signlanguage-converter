@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+/* Body */
+body {
+    background: #0a0a0f;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.nav-links a {
+    color: #a0a0b0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+/* Hero Section */
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+    color: #00ff88;
+}
+
+.hero-content p {
+    color: #a0a0b0;
+    font-size: 18px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00ff88, #0099ff);
+    color: #0a0a0f;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #2a2a35;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Signify</div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <!-- <a href="#">Features</a> -->
+         <a href="features.html">Features</a>
+        <!-- <a href="#">Contact</a> -->
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+        <!-- <a href="features.html">Features</a> -->
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1 class="hero-content">
+        Convert Speech into <span>Sign Language</span>
+        <p>
+            A smart platform that converts speech into sign language, empowering inclusive communication for everyone.
+        </p>
+
+        <!-- <div class="hero-buttons">
+            <button class="btn btn-primary">Upload Audio</button>
+            <button class="btn btn-secondary">Try Live Voice</button>
+        </div> -->
+        
+        <div class="controls">
+        <button class="btn-primary" onclick="startListening()">🎙 Live Voice</button>
+
+        <label class="btn-secondary" for="audioUpload" style="cursor:pointer;">
+            ⬆ Upload Audio
+        </label>
+        <input type="file" id="audioUpload" accept="audio/*" hidden>
+
+        <button class="btn-secondary" onclick="resetOutput()">Reset</button>
+    </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Signify. All rights reserved.
+</footer>
+
+</body>
+</html>
+

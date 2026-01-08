@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features | Signify</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+    background: #0a0a0f;
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ff88;
+}
+
+.nav-links a {
+    color: #a0a0b0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #00ff88;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.features-header span {
+    color: #00ff88;
+}
+
+.features-header p {
+    color: #a0a0b0;
+    font-size: 18px;
+}
+
+/* Feature Cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: #151520;
+    border: 1px solid #2a2a35;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #00ff88;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #a0a0b0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.cta p {
+    color: #a0a0b0;
+    margin-bottom: 24px;
+}
+
+.cta a {
+    text-decoration: none;
+}
+
+.cta button {
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00ff88, #0099ff);
+    color: #0a0a0f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .features {
+        padding: 60px 20px;
+    }
+
+    .features-header h1 {
+        font-size: 2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">Signify</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <!-- <a href="#">Contact</a> -->
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="features-header">
+        <h1>Why <span>Signify</span>?</h1>
+        <p>Powerful features designed to make communication accessible and inclusive.</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🎙️</div>
+            <h3>Speech Recognition</h3>
+            <p>Accurately converts spoken audio into text using real-time speech recognition technology.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🤟</div>
+            <h3>Sign Language Conversion</h3>
+            <p>Transforms recognized text into sign language using visual representations.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Real-Time Processing</h3>
+            <p>Instant conversion ensures smooth and natural communication without delays.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Inclusive Design</h3>
+            <p>Designed to support the deaf and hard-of-hearing community for inclusive interaction.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3>Web-Based Platform</h3>
+            <p>Runs directly in the browser—no installation required on any device.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacy Focused</h3>
+            <p>User audio is processed securely with privacy-first design principles.</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <h2>Ready to Experience Signify?</h2>
+        <p>Try converting speech into sign language in real time.</p>
+        <a href="converter.html">
+            <button>Try Now</button>
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Signify. All rights reserved.
+</footer>
+
+</body>
+</html>
